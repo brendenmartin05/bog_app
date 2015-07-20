@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BogApp</title>
+   <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+  <title>Gig Harbor Biology App</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Gig Harbor Geology Group</a>
+    </div>
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to "Home", root_path%> <span class="sr-only">(current)</span></a></li>
+        <li><%= link_to 'Add Creature', new_article_path %></li>
+        <li> <%= link_to 'All Creatures', articles_path %>
 
-<%= yield %>
+
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <%= yield %>
+    </div>
+
+  </div>
+</div>
+<!--
+<%= yield %> -->
 
 </body>
 </html>
